@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_devices"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Devices" />
+        <item
+            android:id="@+id/nav_cams"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Cams" />
+        <item
+            android:id="@+id/nav_thermostat"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Thermostat" />
+        <item
+            android:id="@+id/nav_rules"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Schedule" />
+    </group>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_sync"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Sync with server" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
