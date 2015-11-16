@@ -15,17 +15,25 @@ import android.view.MenuItem;
 
 import com.asanga.myswannone.R;
 
-public class MainActivity extends AppCompatActivity
+import roboguice.activity.RoboActionBarActivity;
+import roboguice.inject.ContentView;
+import roboguice.inject.InjectView;
+
+@ContentView(R.layout.activity_main)
+public class MainActivity extends RoboActionBarActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    @InjectView(R.id.toolbar)
+    Toolbar toolbar;
+
+    @InjectView(R.id.fab)
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
